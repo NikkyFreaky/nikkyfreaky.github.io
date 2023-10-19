@@ -1,1 +1,1 @@
-nikkyfreaky.github.io
+https://nikkyfreaky.github.io/
