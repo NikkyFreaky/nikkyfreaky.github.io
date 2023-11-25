@@ -81,7 +81,7 @@ body {
   position: relative;
   width: 100%;
 }
-.main-header::before {
+.main-header__picture::before {
   content: '';
   display: block;
   width: 100%;
