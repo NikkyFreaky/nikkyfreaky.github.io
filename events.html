@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Lenni Art</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 
+  <title>Lenni Art</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="../styles/styles.min.css" />
+  <link rel="stylesheet" href="styles/styles.css?ver=0">
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
       <a href="index.html" class="page-header__logo">
         <!-- <img src="assets/images/logo.svg" class="page-header__logo-img"/> -->
         <svg class="page-header__logo-img" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
 
@@ -29,20 +30,47 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
 
-      <a href="#" class="btn page-header__sign-in-btn">Войти</a>
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__sign-in-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+
+        <button type="button" class="page-header__nav-toggle"></button>
+      </div>
     </div>
   </header>
 
   <main class="main">
+    <div class="breadcrumbs">
+      <a href="index.html" class="breadcrumbs__link">Главная</a>
+      <a href="events.html" class="breadcrumbs__link">Мероприятия</a>
+      <a href="#" class="breadcrumbs__link">Страница раздела</a>
+    </div>
+
     <div class="events">
       <section class="listing events__listing">
         <h2 class="listing__title section-title">Мероприятия</h2>
         <div class="listing__events-list">
           <!-- prettier-ignore -->
           <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
+            <a href="event.html" class="event-card__link">
               <picture class="event-card__picture">
 
                 <!-- <source type="image/webp" srcset="assets/images/events/nirvana.png__webp" /> -->
@@ -57,7 +85,7 @@
             </a>
           </article>
           <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
+            <a href="event.html" class="event-card__link">
               <picture class="event-card__picture">
 
                 <!-- <source type="image/webp" srcset="assets/images/events/howstuffworks.png__webp" /> -->
@@ -72,7 +100,7 @@
             </a>
           </article>
           <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
+            <a href="event.html" class="event-card__link">
               <picture class="event-card__picture">
 
                 <!-- <source type="image/webp" srcset="assets/images/events/sade.png__webp" /> -->
@@ -87,7 +115,7 @@
             </a>
           </article>
           <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
+            <a href="event.html" class="event-card__link">
               <picture class="event-card__picture">
 
                 <!-- <source type="image/webp" srcset="assets/images/events/malevich.png__webp" /> -->
@@ -102,7 +130,7 @@
             </a>
           </article>
           <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
+            <a href="event.html" class="event-card__link">
               <picture class="event-card__picture">
 
                 <!-- <source type="image/webp" srcset="assets/images/events/tatler.png__webp" /> -->
@@ -117,7 +145,7 @@
             </a>
           </article>
           <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
+            <a href="event.html" class="event-card__link">
               <picture class="event-card__picture">
 
                 <!-- <source type="image/webp" srcset="assets/images/events/thehatters.png__webp" /> -->
@@ -132,7 +160,187 @@
             </a>
           </article>
         </div>
-        <!-- Кнопка "Показать все" -->
+        <div class="listing__wrapper">
+          <button class="arrow-btn">
+            <span class="arrow-btn__name">
+              Показать ещё
+            </span>
+            <svg class="arrow-btn__icon arrow-btn__icon--down" width="91" height="60">
+              <use xlink:href="assets/icons/symbols.svg#link"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="events__services">
+        <h2 class="section-title section-title--lower">Дополнительные услуги</h2>
+
+        <p class="events__services-description">
+          Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию
+          учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой
+          будет проведение вашего мероприятия на высшем уровне.
+        </p>
+
+        <table class="events__tariffs-table  table">
+          <thead class="table__head">
+            <tr class="table__head-tr">
+              <th class="table__th"></th>
+              <th class="table__th">Тариф «Light»</th>
+              <th class="table__th">Тариф «Promo»</th>
+              <th class="table__th">Тариф «All stars»</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__tr">
+              <th class="table__body-th">Стоимость за час</th>
+              <td class="table__td">1 000 ₽</td>
+              <td class="table__td">3 000 ₽</td>
+              <td class="table__td">3 000 ₽</td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Ведущий мероприятия</th>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Фотосъемка</th>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Видеосъемка</th>
+              <td class="table__td"></td>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Организация питания</th>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Декор</th>
+              <td class="table__td"></td>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Звуковое сопровождение</th>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <th class="table__body-th">Дополнительное освещение</th>
+              <td class="table__td"></td>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__tr">
+              <th class="table__body-th">Клининг</th>
+              <td class="table__td"></td>
+              <td class="table__td"></td>
+              <td class="table__td">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot class="table__footer">
+            <tr class="table__footer-tr">
+              <th class="table__footer-th"></th>
+              <th class="table__footer-th">Тариф «Light»</th>
+              <th class="table__footer-th">Тариф «Promo»</th>
+              <th class="table__footer-th">Тариф «All stars»</th>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="i-want i-want--mb100">
+          <div class="i-want__wrapper">
+            <h3 class="i-want__text">Я хочу:</h3>
+            <div class="i-want__btns">
+              <button class="btn btn--red i-want__event">Провести мероприятие</button>
+              <button class="btn i-want__landlord">Стать арендатором</button>
+            </div>
+          </div>
+        </div>
+        <div class="events__services-items">
+
+          <div class="services-item">
+            <div class="services-item__img">
+              <svg class="services-item__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#information"></use>
+              </svg>
+            </div>
+            <div class="services-item__content">
+              <h4 class="services-item__title">Цены</h4>
+              <p class="services-item__info">
+                Цены, указанные на сайте носят информационный характер. Мы придерживаемся
+                индивидуального подхода в работе с клиентом.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-item">
+            <div class="services-item__img">
+              <svg class="services-item__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#contact"></use>
+              </svg>
+            </div>
+            <div class="services-item__content">
+              <h4 class="services-item__title">Контакты</h4>
+              <p class="services-item__info">
+                Отдел организации мероприятий
+              </p>
+              <a href="tel:74993500740" class="services-item__info">+7 499 350 0730</a>
+              <a href="mailto:hi@tagree.ru" class="services-item__info">hi@tagree.ru</a>
+            </div>
+          </div>
+
+          <div class="services-item">
+            <div class="services-item__img">
+              <svg class="services-item__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#handshake">
+              </svg>
+            </div>
+            <div class="services-item__content">
+              <h4 class="services-item__title">Преимущество</h4>
+              <p class="services-item__info">
+                Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и
+                холдингам.
+              </p>
+            </div>
+          </div>
+
+        </div>
       </section>
     </div>
   </main>
@@ -169,9 +377,34 @@
           <label class="subscribe__check check">
             <input type="checkbox" class="check__input" name="agree" required>
             <span class="check__mark"></span>
-            <span class="check__label">Согласен на обработку персональных данных</span>
+            <span class="check__label--footer">Согласен на обработку персональных данных</span>
           </label>
         </form>
+      </div>
+      <div class="page-footer__info">
+        <div class="page-footer__info-text">
+          <span class="page-footer__copyright">© Millennials 2024</span>
+          <div class="page-footer__links">
+            <a href="#" class="page-footer__links-link">Политика конфиденциальности</a>
+            <a href="#" class="page-footer__links-link">Cookies</a>
+          </div>
+        </div>
+        <div class="page-footer__info-socials">
+          <button type="button" class="page-footer__social-btn">
+            <svg class="page-footer__btn-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#inst"></use>
+            </svg>
+          </button>
+          <button type="button" class="page-footer__social-btn">
+            <svg class="page-footer__btn-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="page-footer__info-signature">
+          <span>Создание и продвижение</span>
+          <img src="assets/icons/tagree.png" alt="tagree" />
+        </div>
       </div>
     </div>
   </footer>
